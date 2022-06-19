@@ -66,21 +66,21 @@ export default class SignUp extends Component {
       this.state.ConfirmPassword !== ''
     ) {
       const data = {
-        userName: this.state.UserName,
+        username: this.state.UserName,
         password: this.state.Password,
-        configPassword: this.state.ConfirmPassword,
-        role: this.state.Radiovalue,
+        confirmPassword: this.state.ConfirmPassword,
+        role: this.state.Radiovalue
       }
 
       authServices
         .SignUp(data)
         .then((data) => {
           console.log('data : ', data)
-          if (data.data.isSuccess) {
-            this.props.history.push('/SignIn')
+          if (data.data.IsSuccess) {
+            this.props.history.push("/SignIn");
           } else {
-            console.log('Sign Up Failed')
-            this.setState({ open: true, Message: 'Sign Up Failed' })
+            console.log("Sign Up Failed");
+            this.setState({ open: true, Message: "Sign Up Failed" });
           }
         })
         .catch((error) => {

@@ -75,11 +75,11 @@ export default class SignIn extends Component {
         .SignIn(data)
         .then((data) => {
           console.log('Data : ', data)
-          if (data.data.isSuccess) {
-            this.props.history.push('/HomePage')
+          if (data.data.IsSuccess) {
+            this.props.history.push("/HomePage");
           } else {
-            console.log('Something Went Wrong')
-            this.setState({ open: true, Message: 'LogIn UnSuccessfully' })
+            console.log("Something Went Wrong");
+            this.setState({ open: true, Message: "LogIn UnSuccessfully" });
           }
         })
         .catch((error) => {

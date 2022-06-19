@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { withRouter,BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import SignUp from './components/SignUp'
 import SignIn from './components/SignIn'
 import HomePage from './components/HomePage'
@@ -18,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
